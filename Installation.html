@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-09-21 Sat 19:53 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Linux Mint Asennusohjeet</title>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Linux Mint Asennusohjeet</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org7ab6ca3">1. Live USB Image</a>
+<ul>
+<li><a href="#org4160a53">1.1. Vapaata tilaa kovalevylle</a></li>
+</ul>
+</li>
+<li><a href="#org8af03ff">2. BIOS</a></li>
+<li><a href="#org2b4c7a8">3. Linux Mint Live Image</a>
+<ul>
+<li><a href="#orgea15b4a">3.1. Drive Partitioning</a>
+<ul>
+<li><a href="#orgc93fcdb">3.1.1. Boot</a></li>
+<li><a href="#org3c52af8">3.1.2. Root</a></li>
+<li><a href="#orgabf83f9">3.1.3. Home</a></li>
+<li><a href="#org6d07ae8">3.1.4. Swap</a></li>
+</ul>
+</li>
+<li><a href="#org6a599d4">3.2. Viimeistely</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7ab6ca3" class="outline-2">
+<h2 id="org7ab6ca3"><span class="section-number-2">1.</span> Live USB Image</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Ensimmäisenä askeleena on polttaa live-versio Linuxista ISO-kuvana USB-tikkuun, koska sen kautta tapahtuu varsinaisen käyttöjärjestelmän asentaminen. Kätevin ratkaisu Windowsissa tähän tarkoitukseen on <a href="https://rufus.ie/fi/">Rufus</a> -sovellus.
+</p>
+
+<p>
+Sovelluksen asentamisen jälkeen tarvitaan ISO-kuva Linux Mintistä, joka löytyy <a href="https://linuxmint.com/download.php">tästä</a>. Sivusto tarjoaa ladattavaksi useita vaihtoehtoja järjestelmästään, joista yhdet ovat hieman tehokkaampia, kun taas toiset ovat visuaalisesti paremmin viimeisteltyjä. Cinammon Edition on mielestäni näistä kaikista mukavin käyttö-ominaisuuksiltaan, joten suosittelen sen lataamista.
+</p>
+
+<p>
+Rufusta avatessa päätyy suoraan sen pääsivulle. Asetuksien määrä voi hämätä ja jopa pelottaa, mutta niistä tarvitaan oikestaan vain kaksi. Laite(Drive) kohdalla valitaan USB-tikku, johon poltetaan äskettäin ladattu tiedosto. Heti sen alapuolella on Boottaustyypin valinta(Boot selection), josta valitaan se sama <code>.iso</code> -kuva. Valmistelut ovat nyt ohi, joten voidaan painaa Aloita(Start) -näppäintä. Polttamisessa kestää jonkun verran, riippuen muistitikun nopeuksista. Kun asennusprosessi päättyy, tikku on valmis käynnistettäväksi.
+</p>
+</div>
+<div id="outline-container-org4160a53" class="outline-3">
+<h3 id="org4160a53"><span class="section-number-3">1.1.</span> Vapaata tilaa kovalevylle</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Luultavasti tällä hetkellä Windows vie kaiken tilan kovalevystäsi. Käyttöjärjestelmät vaativat tilaa, paljon tilaa, joten on tarpeen vapauttaa ainakin 100 GB toista järjestelmää varten. Windowsilla on olemassa oma Levynhallinta -ohjelmisto, joka on tarpeeksi yksiselitteinen. Tehtävänäsi on siis leikata nykyisestä järjestelmästä osan pois. En suosittele tekemään tätä missään muualla kuin Windowsin sisällä, sillä vain se löytää sijoittamiaan tiedostoja koko levyosassa.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org8af03ff" class="outline-2">
+<h2 id="org8af03ff"><span class="section-number-2">2.</span> BIOS</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Nyt, kone on käynnistettävä uudelleen. Heti kun näytölle ilmestyy valmistajan logo, paina BIOS:ia vastaavaa näppäintä (Yleensä <b>ESC</b> tai <b>DELETE</b>). Ruudulle ilmestyy valikko, josta täytyy etsiä laitteiden käynnistysvalikko, joka listaa kaikki koneeseen liitetyt laitteet, kuten esim. USB ja SSD. Valitse USB-tikkusi, jolloin kone lähtee käynnistämään siihen polettun järjestelmän.
+</p>
+</div>
+</div>
+<div id="outline-container-org2b4c7a8" class="outline-2">
+<h2 id="org2b4c7a8"><span class="section-number-2">3.</span> Linux Mint Live Image</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Ladattuaan hetken, järjestelmä tervehtii sinua aloitussivullaan, jossa tarpeeksi suurena näkyy Install Linux Mint -kuvake. Selitän nopeasti, mitä kussakin ikkunassa tulisi tehdä:
+</p>
+
+<ol class="org-ol">
+<li>Valitse kielesi</li>
+<li>Wifi-yhteys (ei pakollinen, mutta helpottaa elämää, kun saa asennuksen valmiiksi)</li>
+<li>Mediakoodekkien asennus (suosittelen)</li>
+</ol>
+</div>
+<div id="outline-container-orgea15b4a" class="outline-3">
+<h3 id="orgea15b4a"><span class="section-number-3">3.1.</span> Drive Partitioning</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Seuraavaan ikkunaan ilmestyy järjestelmän asennustapa. Ensimmäinen vaihtoehto poistaa kaiken levystäsi (ml. Windows) ja puhtaasti asentaa Mintin. Tämä on tietenkin kyseisessä tilanteessa toivoton vaihtoehto. Muutenkin suosittelisin aina tekemään kaiken manuaalisesti mahdollisuuksien mukaan. Manuaalinen tapa on tässä nimeltään <code>Something else</code>.
+</p>
+
+<p>
+Sitä painaessa ilmestyy Windowsista <a href="#org4160a53">tuttu</a> näkymä levyn osista. Tähän tulee luoda 3 osaa:
+</p>
+</div>
+<div id="outline-container-orgc93fcdb" class="outline-4">
+<h4 id="orgc93fcdb"><span class="section-number-4">3.1.1.</span> Boot</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>/boot</li>
+<li>500 MB</li>
+<li>fat32</li>
+</ul>
+
+<p>
+Paikka, johon kone käynnistyy kylmästä tilasta.
+</p>
+</div>
+</div>
+<div id="outline-container-org3c52af8" class="outline-4">
+<h4 id="org3c52af8"><span class="section-number-4">3.1.2.</span> Root</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li>/</li>
+<li>Noin 70% tilasta, jonka määritit järjestelmälle</li>
+<li>ext4</li>
+</ul>
+
+<p>
+Pitää sisällään koko järjestelmän. Myöskin lähes kaikki ohjelmat, jotka tulet asentamaan koneellesi. Tästä johtuen on hyvä jättää sille väljäästi tilaa.
+</p>
+</div>
+</div>
+<div id="outline-container-orgabf83f9" class="outline-4">
+<h4 id="orgabf83f9"><span class="section-number-4">3.1.3.</span> Home</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<ul class="org-ul">
+<li>/home</li>
+<li>Loput tilasta</li>
+<li>ext4</li>
+</ul>
+
+<p>
+Sisältää kaikki käyttäjän henkilökohtaiset tiedostot.
+</p>
+</div>
+</div>
+<div id="outline-container-org6d07ae8" class="outline-4">
+<h4 id="org6d07ae8"><span class="section-number-4">3.1.4.</span> Swap</h4>
+<div class="outline-text-4" id="text-3-1-4">
+<p>
+Tiedän, lupasin vain 3 osaa. Tämä on tarkoitettu sen varalle, jos RAM-muistista pääsee loppumaan tila kesken session aikana. Nykyään koneissa on kuitenkin yleensä +16GB muistia, joten käytännössä tämä osa on aika hyödytön.
+</p>
+
+<ul class="org-ul">
+<li>/swap</li>
+<li>50% RAM kapasiteetista</li>
+<li>swap</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6a599d4" class="outline-3">
+<h3 id="org6a599d4"><span class="section-number-3">3.2.</span> Viimeistely</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>Valitse aikavyöhykkeesi</li>
+<li>Syöttökieli</li>
+<li>Käyttäjän tunnuksien luonti
+<ul class="org-ul">
+<li><b>Vahvasti</b> suosittelen henkilötietojen salausta eli <code>Encrypt my home folder</code></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2024-09-21 Sat 19:53</p>
+</div>
+</body>
+</html>
