@@ -3,195 +3,19 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-11-04 Mon 21:22 -->
+<!-- 2024-11-04 Mon 21:26 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
 <meta name="generator" content="Org Mode" />
-<style type="text/css">
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { }
-</style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/search.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/search.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
 </head>
 <body>
 <div id="content" class="content">
@@ -199,21 +23,21 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org51f2255">Предисловие</a></li>
-<li><a href="#orge9392d6">1. Лёд, лёд и лёд</a></li>
-<li><a href="#org0555f83">2. Мамонты и деревья на леднике</a></li>
-<li><a href="#orgfddc9e7">3. Чёртовы мельницы</a></li>
-<li><a href="#org3f38a41">4. Камни «ледниковых» выбоин</a></li>
-<li><a href="#org79f6bd5">5. Природа созданная катастрофой</a></li>
-<li><a href="#org0680650">6. Что подтверждают предания</a></li>
-<li><a href="#org0d71022">7. Лёд или вода</a></li>
-<li><a href="#org0abb78b">8. Ледниковый период - научный затор</a></li>
+<li><a href="#orgb518b76">Предисловие</a></li>
+<li><a href="#org5129995">1. Лёд, лёд и лёд</a></li>
+<li><a href="#orgc515ca4">2. Мамонты и деревья на леднике</a></li>
+<li><a href="#org2662e57">3. Чёртовы мельницы</a></li>
+<li><a href="#orgb9dc9e8">4. Камни «ледниковых» выбоин</a></li>
+<li><a href="#org2d3a228">5. Природа созданная катастрофой</a></li>
+<li><a href="#org67c9e66">6. Что подтверждают предания</a></li>
+<li><a href="#org7d0ef73">7. Лёд или вода</a></li>
+<li><a href="#orgafd77a5">8. Ледниковый период - научный затор</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org51f2255" class="outline-2">
-<h2 id="org51f2255">Предисловие</h2>
-<div class="outline-text-2" id="text-org51f2255">
+<div id="outline-container-orgb518b76" class="outline-2">
+<h2 id="orgb518b76">Предисловие</h2>
+<div class="outline-text-2" id="text-orgb518b76">
 <p>
 У каждого времени и у временного периода в истории земного шара было своё представление о мире. Вплоть до половины XIX века основания этого представления покоились на теории катастрофы, в соответствии с которой в прошлом однажды произошло огромное бедствие. О том как это произошло можно прочитать в Библии, а также в сохранившихся мифах и легендах, собранных среди более 90 народов.
 </p>
@@ -283,8 +107,8 @@
 </p>
 </div>
 </div>
-<div id="outline-container-orge9392d6" class="outline-2">
-<h2 id="orge9392d6"><span class="section-number-2">1.</span> Лёд, лёд и лёд</h2>
+<div id="outline-container-org5129995" class="outline-2">
+<h2 id="org5129995"><span class="section-number-2">1.</span> Лёд, лёд и лёд</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Говоря о ледниковой теории, ученые акцентируют внимание на огромное количество льда, которое существовало сотни тысяч лет. В соответствии с их теорией оледенение началось 500 000 лет назад и завершилось примерно 10 000 лет назад. Между ледниковыми эпохами был некоторый долгий и тёплый промежуточный период, на протяжении которого льда не было. Самое обширное распространение ледникового щита занимало площадь свыше 40 млн. км². Толщина льда превышала три километра.
@@ -395,7 +219,7 @@
 </p>
 
 
-<div id="orgbd3fea3" class="figure">
+<div id="org8e34189" class="figure">
 <p><img src="./01_Images/67.png" alt="67.png" />
 </p>
 </div>
@@ -413,7 +237,7 @@
 </p>
 
 
-<div id="org8034162" class="figure">
+<div id="orge90a180" class="figure">
 <p><img src="./01_Images/1.png" alt="1.png" />
 </p>
 </div>
@@ -427,7 +251,7 @@
 </p>
 
 
-<div id="org12c381b" class="figure">
+<div id="org468712d" class="figure">
 <p><img src="./01_Images/2.png" alt="2.png" />
 </p>
 </div>
@@ -437,7 +261,7 @@
 </p>
 
 
-<div id="org49771ea" class="figure">
+<div id="orgcc558b4" class="figure">
 <p><img src="./01_Images/3.png" alt="3.png" />
 </p>
 </div>
@@ -447,7 +271,7 @@
 </p>
 
 
-<div id="org07706eb" class="figure">
+<div id="org4d3a708" class="figure">
 <p><img src="./01_Images/4.png" alt="4.png" />
 </p>
 </div>
@@ -457,8 +281,8 @@
 </p>
 </div>
 </div>
-<div id="outline-container-org0555f83" class="outline-2">
-<h2 id="org0555f83"><span class="section-number-2">2.</span> Мамонты и деревья на леднике</h2>
+<div id="outline-container-orgc515ca4" class="outline-2">
+<h2 id="orgc515ca4"><span class="section-number-2">2.</span> Мамонты и деревья на леднике</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Мамонт является самым известным животным, найденным в вечной мерзлоте. В Ленинградском зоологическом музее находится мамонт, которого нашли в Сибири в 1902 году. Его выкопали из берегового откоса реки Березовки совершенно неповреждённым, и он был наполовину в стоячем положении. Во рту животного были неразмороженные одуванчики, а в его животе неразмороженная пища.
@@ -637,7 +461,7 @@
 </p>
 
 
-<div id="orgca28c05" class="figure">
+<div id="orgf1fc533" class="figure">
 <p><img src="./01_Images/5.png" alt="5.png" />
 </p>
 </div>
@@ -655,7 +479,7 @@
 </p>
 
 
-<div id="orgf340152" class="figure">
+<div id="org4bef9af" class="figure">
 <p><img src="./01_Images/6.png" alt="6.png" />
 </p>
 </div>
@@ -665,7 +489,7 @@
 </p>
 
 
-<div id="orgb3fab4e" class="figure">
+<div id="orga06ecb6" class="figure">
 <p><img src="./01_Images/7.png" alt="7.png" />
 </p>
 </div>
@@ -679,7 +503,7 @@
 </p>
 
 
-<div id="org0ffc700" class="figure">
+<div id="org02d7a56" class="figure">
 <p><img src="./01_Images/8.png" alt="8.png" />
 </p>
 </div>
@@ -689,7 +513,7 @@
 </p>
 
 
-<div id="org8caad16" class="figure">
+<div id="org4dfa3c7" class="figure">
 <p><img src="./01_Images/9.png" alt="9.png" />
 </p>
 </div>
@@ -699,7 +523,7 @@
 </p>
 
 
-<div id="org17f304a" class="figure">
+<div id="org60e1161" class="figure">
 <p><img src="./01_Images/10.png" alt="10.png" />
 </p>
 </div>
@@ -709,7 +533,7 @@
 </p>
 
 
-<div id="org6e1f8fa" class="figure">
+<div id="orge051ec1" class="figure">
 <p><img src="./01_Images/11.png" alt="11.png" />
 </p>
 </div>
@@ -723,7 +547,7 @@
 </p>
 
 
-<div id="org9983f60" class="figure">
+<div id="orgfc259ca" class="figure">
 <p><img src="./01_Images/12.png" alt="12.png" />
 </p>
 </div>
@@ -733,8 +557,8 @@
 </p>
 </div>
 </div>
-<div id="outline-container-orgfddc9e7" class="outline-2">
-<h2 id="orgfddc9e7"><span class="section-number-2">3.</span> Чёртовы мельницы</h2>
+<div id="outline-container-org2662e57" class="outline-2">
+<h2 id="org2662e57"><span class="section-number-2">3.</span> Чёртовы мельницы</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Ледниковые выбоины, или как их ещё называют «чёртовы мельницы», столетиями пленяют воображение. Они словно визитные карточки какого-то события.
@@ -869,13 +693,13 @@
 </p>
 
 
-<div id="org8a3d12e" class="figure">
+<div id="orgc917b8e" class="figure">
 <p><img src="./01_Images/13.png" alt="13.png" />
 </p>
 </div>
 
 
-<div id="org1cc01ae" class="figure">
+<div id="orgf43f3c4" class="figure">
 <p><img src="./01_Images/14.png" alt="14.png" />
 </p>
 </div>
@@ -885,7 +709,7 @@
 </p>
 
 
-<div id="org526287c" class="figure">
+<div id="org5fc902c" class="figure">
 <p><img src="./01_Images/15.png" alt="15.png" />
 </p>
 </div>
@@ -895,7 +719,7 @@
 </p>
 
 
-<div id="orga90eb04" class="figure">
+<div id="org3bb2aa3" class="figure">
 <p><img src="./01_Images/16.png" alt="16.png" />
 </p>
 </div>
@@ -909,7 +733,7 @@
 </p>
 
 
-<div id="orgec47810" class="figure">
+<div id="org0765b76" class="figure">
 <p><img src="./01_Images/17.png" alt="17.png" />
 </p>
 </div>
@@ -919,7 +743,7 @@
 </p>
 
 
-<div id="org03fc433" class="figure">
+<div id="org3de4acc" class="figure">
 <p><img src="./01_Images/18.png" alt="18.png" />
 </p>
 </div>
@@ -929,7 +753,7 @@
 </p>
 
 
-<div id="orgf969c67" class="figure">
+<div id="org901de92" class="figure">
 <p><img src="./01_Images/19.png" alt="19.png" />
 </p>
 </div>
@@ -943,7 +767,7 @@
 </p>
 
 
-<div id="org0efd27f" class="figure">
+<div id="org8d63819" class="figure">
 <p><img src="./01_Images/20.png" alt="20.png" />
 </p>
 </div>
@@ -953,7 +777,7 @@
 </p>
 
 
-<div id="org4beddac" class="figure">
+<div id="orgef7503e" class="figure">
 <p><img src="./01_Images/21.png" alt="21.png" />
 </p>
 </div>
@@ -963,8 +787,8 @@
 </p>
 </div>
 </div>
-<div id="outline-container-org3f38a41" class="outline-2">
-<h2 id="org3f38a41"><span class="section-number-2">4.</span> Камни «ледниковых» выбоин</h2>
+<div id="outline-container-orgb9dc9e8" class="outline-2">
+<h2 id="orgb9dc9e8"><span class="section-number-2">4.</span> Камни «ледниковых» выбоин</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 В Финляндии опустошено много ледниковых выбоин, но никто никогда не интересовался находящимися в них камнями. Их при опустошении выбрасывали как мусор, чтобы они не мешали видеть токарные камни. При опустошении выбоины в Рюмяттюля я решил исследовать также и камни, которыми была заполнена эта выбоина.
@@ -1059,7 +883,7 @@
 </p>
 
 
-<div id="org49df163" class="figure">
+<div id="org3d178e4" class="figure">
 <p><img src="./01_Images/22.png" alt="22.png" />
 </p>
 </div>
@@ -1069,7 +893,7 @@
 </p>
 
 
-<div id="org2b25136" class="figure">
+<div id="org3dfefad" class="figure">
 <p><img src="./01_Images/23.png" alt="23.png" />
 </p>
 </div>
@@ -1079,13 +903,13 @@
 </p>
 
 
-<div id="orgc0cdf58" class="figure">
+<div id="org04719d0" class="figure">
 <p><img src="./01_Images/24.png" alt="24.png" />
 </p>
 </div>
 
 
-<div id="org1ed9391" class="figure">
+<div id="org2b8f2ff" class="figure">
 <p><img src="./01_Images/25.png" alt="25.png" />
 </p>
 </div>
@@ -1095,7 +919,7 @@
 </p>
 
 
-<div id="org3578eef" class="figure">
+<div id="org169640f" class="figure">
 <p><img src="./01_Images/26.png" alt="26.png" />
 </p>
 </div>
@@ -1105,7 +929,7 @@
 </p>
 
 
-<div id="org812baa7" class="figure">
+<div id="org9925275" class="figure">
 <p><img src="./01_Images/27.png" alt="27.png" />
 </p>
 </div>
@@ -1115,13 +939,13 @@
 </p>
 
 
-<div id="org664d516" class="figure">
+<div id="org6f48b7a" class="figure">
 <p><img src="./01_Images/28.png" alt="28.png" />
 </p>
 </div>
 
 
-<div id="orga14eb0f" class="figure">
+<div id="org936d193" class="figure">
 <p><img src="./01_Images/29.png" alt="29.png" />
 </p>
 </div>
@@ -1135,7 +959,7 @@
 </p>
 
 
-<div id="orgade8499" class="figure">
+<div id="org9cbecc3" class="figure">
 <p><img src="./01_Images/30.png" alt="30.png" />
 </p>
 </div>
@@ -1145,7 +969,7 @@
 </p>
 
 
-<div id="orgfd391d0" class="figure">
+<div id="org2206fc6" class="figure">
 <p><img src="./01_Images/31.png" alt="31.png" />
 </p>
 </div>
@@ -1155,7 +979,7 @@
 </p>
 
 
-<div id="org57a6bea" class="figure">
+<div id="orgeea78e9" class="figure">
 <p><img src="./01_Images/32.png" alt="32.png" />
 </p>
 </div>
@@ -1165,8 +989,8 @@
 </p>
 </div>
 </div>
-<div id="outline-container-org79f6bd5" class="outline-2">
-<h2 id="org79f6bd5"><span class="section-number-2">5.</span> Природа созданная катастрофой</h2>
+<div id="outline-container-org2d3a228" class="outline-2">
+<h2 id="org2d3a228"><span class="section-number-2">5.</span> Природа созданная катастрофой</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Следы глобальной катастрофы можно увидеть в самых неожиданных направлениях. При исследовании механизма зарождения выбоин мы выяснили, что к их появлению приурочен огромный жар. То непостижимое тепло, однажды побывавшее на земле даёт объяснение зарождению многих других веществ и явлений на поверхности земли, кроме выбоин. Не нужны более тёплые или холодные периоды в милионы лет в истории, колебания земного шара из стороны в сторону и ещё какие-нибудь далёкие, искусственно придуманные объяснения. Благодаря влияниям одной тотальной катастрофы и относящиеся к ней явления получают своё объяснение образование нефти и каменного угля. Болота Финляндии и других стран мира давно обесценились в глазах исследователей, их изучением никто не занимается, но и они тоже результат той катастрофы. Также к тому урагану можем отнести разрыв континентов и современную форму поверхности Земли.
@@ -1317,7 +1141,7 @@
 </p>
 
 
-<div id="org1f6a669" class="figure">
+<div id="org5aa1439" class="figure">
 <p><img src="./01_Images/33.png" alt="33.png" />
 </p>
 </div>
@@ -1327,7 +1151,7 @@
 </p>
 
 
-<div id="org56957ae" class="figure">
+<div id="org58f3bf8" class="figure">
 <p><img src="./01_Images/34.png" alt="34.png" />
 </p>
 </div>
@@ -1337,7 +1161,7 @@
 </p>
 
 
-<div id="orgc0445e5" class="figure">
+<div id="org01c5fcf" class="figure">
 <p><img src="./01_Images/35.png" alt="35.png" />
 </p>
 </div>
@@ -1347,7 +1171,7 @@
 </p>
 
 
-<div id="orgb648d81" class="figure">
+<div id="org165ba45" class="figure">
 <p><img src="./01_Images/36.png" alt="36.png" />
 </p>
 </div>
@@ -1357,7 +1181,7 @@
 </p>
 
 
-<div id="org11811c5" class="figure">
+<div id="org71d84c2" class="figure">
 <p><img src="./01_Images/37.png" alt="37.png" />
 </p>
 </div>
@@ -1367,7 +1191,7 @@
 </p>
 
 
-<div id="orge4752f6" class="figure">
+<div id="orgfbc9437" class="figure">
 <p><img src="./01_Images/38.png" alt="38.png" />
 </p>
 </div>
@@ -1381,7 +1205,7 @@
 </p>
 
 
-<div id="org1e19739" class="figure">
+<div id="org6c3a4df" class="figure">
 <p><img src="./01_Images/39.png" alt="39.png" />
 </p>
 </div>
@@ -1391,8 +1215,8 @@
 </p>
 </div>
 </div>
-<div id="outline-container-org0680650" class="outline-2">
-<h2 id="org0680650"><span class="section-number-2">6.</span> Что подтверждают предания</h2>
+<div id="outline-container-org67c9e66" class="outline-2">
+<h2 id="org67c9e66"><span class="section-number-2">6.</span> Что подтверждают предания</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Если когда-то было внезапное поднятие уровня моря или увеличение объёма воды на нашем земном шаре, то об этом остались бы сведения. Таких документов земной шар полон, хотя к ним за последние сто лет относятся весьма пренебрежительно. Тем не менее предания более девяноста народов рассказывают об огромной катастрофе, которая однажды покрыла весь тогдашний земной шар. Это сказание записано в каждой стороне земного шара где-то в большей, а где-то в меньшей степени, перемешанной с поэтическим материалом.
@@ -1535,7 +1359,7 @@
 </p>
 
 
-<div id="org5ced0fc" class="figure">
+<div id="org613fd19" class="figure">
 <p><img src="./01_Images/40.png" alt="40.png" />
 </p>
 </div>
@@ -1545,7 +1369,7 @@
 </p>
 
 
-<div id="org7e64357" class="figure">
+<div id="org0a23e2b" class="figure">
 <p><img src="./01_Images/41.png" alt="41.png" />
 </p>
 </div>
@@ -1555,7 +1379,7 @@
 </p>
 
 
-<div id="org670ded5" class="figure">
+<div id="org5f0d3f6" class="figure">
 <p><img src="./01_Images/42.png" alt="42.png" />
 </p>
 </div>
@@ -1565,7 +1389,7 @@
 </p>
 
 
-<div id="orgd6ba20c" class="figure">
+<div id="orge060391" class="figure">
 <p><img src="./01_Images/43.png" alt="43.png" />
 </p>
 </div>
@@ -1575,7 +1399,7 @@
 </p>
 
 
-<div id="org88f7fc0" class="figure">
+<div id="org217dda5" class="figure">
 <p><img src="./01_Images/44.png" alt="44.png" />
 </p>
 </div>
@@ -1605,8 +1429,8 @@
 </p>
 </div>
 </div>
-<div id="outline-container-org0d71022" class="outline-2">
-<h2 id="org0d71022"><span class="section-number-2">7.</span> Лёд или вода</h2>
+<div id="outline-container-org7d0ef73" class="outline-2">
+<h2 id="org7d0ef73"><span class="section-number-2">7.</span> Лёд или вода</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 Учёные скрыли прошлое человечества под трёхкилометровым слоем льда. Более века всем, найденным в результате раскопок, явлениям даются объяснения, обоснованные ледниковой теорией. Например, обнаруженные широколиственные леса в Лапландии, оказывается, росли в межледниковый, более тёплый период, мамонты выживали в суровых климатических условиях тундры, выкапывая из-под снега еду, ледяные горы сбрасывали огромные валуны и т. д. Ледниковый период, таким образом, проявлялся всегда и везде, формируя облик нашей планеты, но чем больше свидетельств находят, тем несуразнее объяснения им приписывают.
@@ -1729,7 +1553,7 @@
 </p>
 
 
-<div id="org7d44552" class="figure">
+<div id="orgf0416f9" class="figure">
 <p><img src="./01_Images/45.png" alt="45.png" />
 </p>
 </div>
@@ -1748,7 +1572,7 @@
 </ol>
 
 
-<div id="org36e045d" class="figure">
+<div id="orgaecec85" class="figure">
 <p><img src="./01_Images/46.png" alt="46.png" />
 </p>
 </div>
@@ -1758,7 +1582,7 @@
 </p>
 
 
-<div id="org19165e5" class="figure">
+<div id="orgb18f4e2" class="figure">
 <p><img src="./01_Images/47.png" alt="47.png" />
 </p>
 </div>
@@ -1778,7 +1602,7 @@
 </p>
 
 
-<div id="org49cd590" class="figure">
+<div id="orgaa75db7" class="figure">
 <p><img src="./01_Images/48.png" alt="48.png" />
 </p>
 </div>
@@ -1789,7 +1613,7 @@
 
 
 
-<div id="orgdd6a055" class="figure">
+<div id="orgc805a64" class="figure">
 <p><img src="./01_Images/49.png" alt="49.png" />
 </p>
 </div>
@@ -1799,7 +1623,7 @@
 </p>
 
 
-<div id="org52c378b" class="figure">
+<div id="orgf234397" class="figure">
 <p><img src="./01_Images/50.png" alt="50.png" />
 </p>
 </div>
@@ -1809,7 +1633,7 @@
 </p>
 
 
-<div id="orgc21e7a8" class="figure">
+<div id="orga5331b0" class="figure">
 <p><img src="./01_Images/51.png" alt="51.png" />
 </p>
 </div>
@@ -1819,8 +1643,8 @@
 </p>
 </div>
 </div>
-<div id="outline-container-org0abb78b" class="outline-2">
-<h2 id="org0abb78b"><span class="section-number-2">8.</span> Ледниковый период - научный затор</h2>
+<div id="outline-container-orgafd77a5" class="outline-2">
+<h2 id="orgafd77a5"><span class="section-number-2">8.</span> Ледниковый период - научный затор</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 Мы познакомились со многими доказательствами того, что существование ледникового периода в прошлом определённо, является заблуждением учёных. Появившаяся более сотни лет назад научная гипотеза теперь превратилась в непреодалимую ледяную гору, с которой неизбежно должна столкнуться каждая новая догадка. Каждый новый исследователь хочет только оставить свой след на доске ледникового периода, внося лишь изменения в его хронологию. Мы же теперь близки к тому моменту, когда вся эта огромная ледяная гора рухнет из-за своей несостоятельности.
@@ -1927,7 +1751,7 @@
 </p>
 
 
-<div id="org24f7990" class="figure">
+<div id="org860e48a" class="figure">
 <p><img src="./01_Images/52.png" alt="52.png" />
 </p>
 </div>
@@ -1937,7 +1761,7 @@
 </p>
 
 
-<div id="org671c5d3" class="figure">
+<div id="org7e9bfc3" class="figure">
 <p><img src="./01_Images/53.png" alt="53.png" />
 </p>
 </div>
@@ -1947,7 +1771,7 @@
 </p>
 
 
-<div id="orgc54cd27" class="figure">
+<div id="orgfa52796" class="figure">
 <p><img src="./01_Images/54.png" alt="54.png" />
 </p>
 </div>
@@ -1957,7 +1781,7 @@
 </p>
 
 
-<div id="org529cd06" class="figure">
+<div id="orga3995cd" class="figure">
 <p><img src="./01_Images/55.png" alt="55.png" />
 </p>
 </div>
@@ -1999,7 +1823,7 @@
 </p>
 
 
-<div id="org2b02d49" class="figure">
+<div id="orgf2f17a6" class="figure">
 <p><img src="./01_Images/56.png" alt="56.png" />
 </p>
 </div>
@@ -2009,7 +1833,7 @@
 </p>
 
 
-<div id="org9aa5a28" class="figure">
+<div id="org507a159" class="figure">
 <p><img src="./01_Images/57.png" alt="57.png" />
 </p>
 </div>
@@ -2019,7 +1843,7 @@
 </p>
 
 
-<div id="orgf811863" class="figure">
+<div id="org0d4d0df" class="figure">
 <p><img src="./01_Images/58.png" alt="58.png" />
 </p>
 </div>
@@ -2029,7 +1853,7 @@
 </p>
 
 
-<div id="org454161f" class="figure">
+<div id="orgaea254a" class="figure">
 <p><img src="./01_Images/59.png" alt="59.png" />
 </p>
 </div>
@@ -2039,7 +1863,7 @@
 </p>
 
 
-<div id="orga8b7499" class="figure">
+<div id="org277050d" class="figure">
 <p><img src="./01_Images/60.png" alt="60.png" />
 </p>
 </div>
@@ -2057,7 +1881,7 @@
 </p>
 
 
-<div id="org98448ba" class="figure">
+<div id="org326c028" class="figure">
 <p><img src="./01_Images/61.png" alt="61.png" />
 </p>
 </div>
@@ -2127,7 +1951,7 @@
 </p>
 
 
-<div id="orgf5bc56b" class="figure">
+<div id="org8f6c7bb" class="figure">
 <p><img src="./01_Images/62.png" alt="62.png" />
 </p>
 </div>
@@ -2201,7 +2025,7 @@
 </p>
 
 
-<div id="org8a338ee" class="figure">
+<div id="org0108f3b" class="figure">
 <p><img src="./01_Images/63.png" alt="63.png" />
 </p>
 </div>
@@ -2251,7 +2075,7 @@
 </p>
 
 
-<div id="orgb48b67a" class="figure">
+<div id="org08e0c9d" class="figure">
 <p><img src="./01_Images/64.png" alt="64.png" />
 </p>
 </div>
@@ -2267,7 +2091,7 @@
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2024-11-04 Mon 21:22</p>
+<p class="date">Created: 2024-11-04 Mon 21:26</p>
 </div>
 </body>
 </html>
