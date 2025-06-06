@@ -1,0 +1,23 @@
+:root{
+    --bg: #282828;
+    --fg: #D4BE98;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+h1 {
+    color: var(--fg);
+    font-family: 'JetBrains Mono';
+    src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-ExtraBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-ExtraBold.woff') format('woff');
+    text-align: center;
+    display: flex;
+    /* padding: 70px 0; */
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    text-shadow: 10px 10px black;
+    font-style: italic;
+}
